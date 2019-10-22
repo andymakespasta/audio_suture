@@ -1,0 +1,95 @@
+Goals:
+
+Collect audio clips and stitch them together into one "recording"
+
+
+
+Requirements:
+P0
+collect and tag audio (make it video with built in webcam ? )
+	surface audio options
+	record when ready
+	playback recording
+	option to retry
+	option to cancel
+	option to submit
+	tag recorded clips
+
+stitch together based on settings/input
+	Some sort of markup language?
+	settings allow fixed sections
+	settings allow optional sections [have or skip over]
+	settings allow variable list of inputs [chain n sections]
+
+P1
+volume normalization
+
+cut out empty space around speech
+
+distributed collection across multiple machines
+
+
+
+P2
+smooth transitions
+	tempo of speech
+	fade unfade
+	background noise
+
+input gives richer specification 
+	on order of importance (and surface more important stuff first)
+	on who is allowed to record what
+
+more powerful stitching
+	handles
+
+
+
+
+Existing work / Research:
+Audio related Libraries:
+(X) - OpenAL - play & combine 
+(?) - FFTW - open fast fourier transform (included in clam)
+(?) - CLAM - https://clam-project.org/doc.html
+(?) - STK
+(?) - CSL
+(?) - SndObj
+(?) - RtAudio
+(?) - Aubio
+(?) - Essentia - https://github.com/MTG/essentia
+(?) - 
+
+Other Libraries:
+(O) - Qt - cross platform GUI and data handling
+(?) - 
+(?) - 
+(?) - 
+(?) - 
+
+
+
+Overall architecture:
+
+Data:
+Audio Database (folder with files)
+script
+
+Executables:
+Collector looks at script and Audio database
+Collector asks for user class (optional) 
+	Collector creates a list of missing audio based on priority, and shows prompts/ options for recording
+		Selecting a option brings up a prompt, (and maybe a video screen and visual recording indicator) and options
+		Start
+		Stop
+		Restart
+		Playback: 
+		Submit
+
+Collector has prompt for stats:
+	Shows missing audio for completion.
+	Shows amount of audio collected and the balance of types of audio collected.
+
+
+Stitcher looks at script and Audio database
+Stitcher should show same set of missing audio for completion as collector
+Stitcher can be command line only. Run to generate single audio file.

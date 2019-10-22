@@ -1,0 +1,36 @@
+Input markup language:
+
+Specify User Type
+Specify 
+
+
+file names: title_chunkno(-chunkname)_optionno(-optionname)
+
+JSON-like
+{
+	"Title": "Wedcongrats",
+	"Users": ["narrator", "bride_Guest", "groom_Guest", "guest"], //well ordered, 0 indexed
+	"UserSelections": {nu fan qin you":1, "nan fan qin you":2, "dou shi":3}
+	"Script": //in order of appearance
+	[
+		{"Transcript": "I lived in a", "Users":[0], }
+		{"Selection":"houses", "Prompt":""}
+		{"Prompt": "Describe you it feels living in ad housing. ex. It was horrid" }
+		{}
+	]
+
+	
+
+}
+
+Transcript is optional, but will be the fallback if "Prompt" is missing
+
+
+Descriptors for sound, at least one should be provided
+
+"Transcript" : text transcript, not useful for freeform
+"Selection" : option to be selected, falls back to prompt, falls back to transcript (character cutoff)
+"Prompt" : extra information shown once option is selected. Falls back to transcript, falls back to prompt
+
+{"I lived in a", } -> backstory-1.wav
+{(1+)["hut","house", "cell block"], "squalor"} -> backstory-2_squalor_hut.wav backstory-2squalor-house.wav backstory-2-squalor-cellblock.wav
