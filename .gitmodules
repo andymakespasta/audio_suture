@@ -1,0 +1,6 @@
+[submodule "src/external/ffmpeg"]
+	path = src/external/ffmpeg
+	url = git://source.ffmpeg.org/ffmpeg
+[submodule "src/external/openpnp-capture"]
+	path = src/external/openpnp-capture
+	url = https://github.com/openpnp/openpnp-capture

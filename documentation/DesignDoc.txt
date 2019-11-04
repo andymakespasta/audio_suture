@@ -67,8 +67,37 @@ Other Libraries:
 (?) - 
 
 
+Video caputre:
+Open pnp: cross platform video capture:
+	https://github.com/openpnp/openpnp-capturesu
+
+
 
 Overall architecture:
+
+In the complete and compiled setup:
+
+	A_Collect (.exe):
+		(QT) executable that looks at script, and shows propmts / options, and saves files in a well known format and names
+	A_Stitch (.exe):
+		executable that looks at script, and the collect audio files, and outputs everything into a single audio/video.
+	data/script.json
+		A JSON based file that specifies what prompts we give, and how the collected audio should be stitched together
+	data/blah.blah
+		collected audio/video files should live here.
+
+
+A_Collect:
+		Selecting a option brings up a prompt, (and maybe a video screen and visual recording indicator) and options
+		Start
+		Stop
+		Restart
+		Playback: 
+		Submit
+
+A_Stitch:
+
+
 
 Data:
 Audio Database (folder with files)
@@ -78,12 +107,7 @@ Executables:
 Collector looks at script and Audio database
 Collector asks for user class (optional) 
 	Collector creates a list of missing audio based on priority, and shows prompts/ options for recording
-		Selecting a option brings up a prompt, (and maybe a video screen and visual recording indicator) and options
-		Start
-		Stop
-		Restart
-		Playback: 
-		Submit
+
 
 Collector has prompt for stats:
 	Shows missing audio for completion.

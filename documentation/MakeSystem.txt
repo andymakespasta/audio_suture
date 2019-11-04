@@ -1,0 +1,89 @@
+Goals:
+
+1. Compile in linux-based system (Ubuntu), runs in linux-based system
+2. Compile in linux OR win system, runs in Windows-based system
+3. Compile in linux-based system, runs in raspberry-pi
+
+
+
+Setup:
+
+
+
+
+
+
+1.  linux for linux
+apt-get install ffmpeg 
+
+if need more: https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu
+https://trac.ffmpeg.org/wiki/CompilationGuide/Generic
+
+
+
+2. for windows:
+https://trac.ffmpeg.org/wiki/CompilationGuide/CrossCompilingForWindows
+
+
+
+
+
+3. For rasp-pi
+cross-compiling:
+https://trac.ffmpeg.org/wiki/CompilationGuide/RaspberryPi
+
+
+
+
+log of what I did to get set up:
+apt-get install ffmpeg (already), can't find libavformat
+sudo apt-get install libavcodec-dev
+sudo apt-get install libavformat-dev
+
+automatically finds the libraries!
+
+list of related libraries available via sudo apt-get
+ffmpeg - Tools for transcoding, streaming and playing of multimedia files
+ffmpeg-dbg - Debug symbols for the FFmpeg multimedia framework
+ffmpeg-doc - Documentation of the FFmpeg multimedia framework
+ffmpeg2theora - Theora video encoder using ffmpeg
+ffmpegthumbnailer - fast and lightweight video thumbnailer
+ffmpegthumbnailer-dbg - debugging information for ffmpegthumbnailer
+ffmpegthumbs - video thumbnail generator using ffmpeg
+gmerlin-encoders-ffmpeg - ffmpeg encoders for Gmerlin
+libavcodec-dev - FFmpeg library with de/encoders for audio/video codecs - development files
+libavcodec-extra - FFmpeg library with extra codecs (metapackage)
+libavcodec-ffmpeg-extra56 - FFmpeg library with additional de/encoders for audio/video codecs
+libavcodec-ffmpeg56 - FFmpeg library with de/encoders for audio/video codecs - runtime files
+libavdevice-dev - FFmpeg library for handling input and output devices - development files
+libavdevice-ffmpeg56 - FFmpeg library for handling input and output devices - runtime files
+libavfilter-dev - FFmpeg library containing media filters - development files
+libavfilter-ffmpeg5 - FFmpeg library containing media filters - runtime files
+libavformat-dev - FFmpeg library with (de)muxers for multimedia containers - development files
+libavformat-ffmpeg56 - FFmpeg library with (de)muxers for multimedia containers - runtime files
+libavresample-dev - FFmpeg compatibility library for resampling - development files
+libavresample-ffmpeg2 - FFmpeg compatibility library for resampling - runtime files
+libavutil-dev - FFmpeg library with functions for simplifying programming - development files
+libavutil-ffmpeg54 - FFmpeg library with functions for simplifying programming - runtime files
+libpostproc-dev - FFmpeg library for post processing - development files
+libpostproc-ffmpeg53 - FFmpeg library for post processing - runtime files
+libswresample-dev - FFmpeg library for audio resampling, rematrixing etc. - development files
+libswresample-ffmpeg1 - FFmpeg library for audio resampling, rematrixing etc. - runtime files
+libswscale-dev - FFmpeg library for image scaling and various conversions - development files
+libswscale-ffmpeg3 - FFmpeg library for image scaling and various conversions - runtime files
+andy@silver:~/audio_suture/src/stitcher$ sudo apt-get install libavcodec-dev
+
+
+
+
+
+
+
+
+openpnp bootstrap required:
+sudo apt-get install cmake
+sudo apt-get install nasm
+sudo apt-get install libgtk-3-dev
+
+openpnp example uses qtcreator
+sudo apt-get install qtcreator
