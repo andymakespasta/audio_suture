@@ -1,0 +1,263 @@
+html, body {
+    /*font-family: 'Open Sans', sans-serif;*/
+    /*font-family: 'Coming Soon', cursive;*/
+    margin:0px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.split {
+  height: 100%;
+  
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  /*padding-top: 20px;*/
+}
+
+/* Control the left side */
+.left {
+	width: 40%;
+  	left: 0;
+    background-image: url("assets/paper.png");
+}
+
+/* Control the right side */
+.right {
+	width: 60%;
+  	right: 0;
+}
+
+
+
+
+
+
+
+
+
+/*Record Panel Stuff*/
+#record_controls {
+  position: relative;
+    width: 85%;
+    top:10%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#record_controls video {
+  vertical-align: top;
+  --width: 100%;
+  width: var(--width);
+  height: calc(var(--width) * 0.5625);
+  border: 5px solid #ccc;
+}
+
+#view_block_countdown {
+    position:fixed;
+    background-color: rgba(0,0,0,0.7);;
+    font-size: 5vh;
+    z-index: 0;
+    color: white;
+    text-align:center;
+    vertical-align: middle;
+}
+
+#startstopdiv {
+    width: 100%;
+    margin-top: 1vh;
+    text-align:center;
+    border: 5px solid #ccc;
+}
+#startstopdiv {
+    width: 100%;
+    margin-top: 1vh;
+    text-align:center;
+    border: 5px solid #ccc;
+}
+#startstopicon {
+    height: 4vw;  
+    width: 4vw;
+    border: none;
+    background: url('assets/record-button.png') no-repeat top left;
+    background-size: 4vw 4vw;
+    vertical-align: middle;
+}
+#startstoptext {
+    height: 4vw;
+    font-size: 2vw;
+    vertical-align: middle;
+}
+
+#record_category_text {
+    font-size: 1.7vw;
+}
+#record_phrase_text {
+    font-size: 2vw;
+    color: teal;
+}
+#record_phrase_text2 {
+    font-size: 2vw;
+    color: teal;
+}
+
+
+
+
+
+
+
+
+/*Selection Panel Stuff*/
+ /* Style the tab */
+.tabbar {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tabbar button {
+  /*background-color: inherit;*/
+  /*background-color: #555;*/
+  float: left;
+  /*border: 1px solid #ddd;*/
+  /*outline: none;*/
+  cursor: pointer;
+
+    top: 0;
+  bottom: 0;
+  width: 25%;
+  height: 100%;
+
+  padding: 10px 12px; /*padding around text*/
+  font-size: 1.7vw;
+
+  transition: 0.3s;
+}
+
+.StartTab {background-color: silver;}
+.Yao {background-color: khaki;}
+.Yeh {background-color: lightsalmon;}
+.Both {background-color: thistle;}
+.Bless {background-color: lightcyan;}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  height:100%;
+  text-align:center;
+
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+} 	
+
+/*selection panel stuff */
+.tabcontent h3{
+    font-size: 3vh;
+    letter-spacing: 0.1em;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.selectablePhrase {
+    font-size: 3vh;
+    margin-left:0.5vw;
+    margin-top:0.5vw;
+}
+
+.Free {
+    font-size: 4.5vh;
+}
+
+
+.selected {
+    font-size: 6vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Overlay Stuff*/
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 10;
+  text-align: center; /* Centered text/links */
+  /*cursor: pointer;*/
+}
+
+#init_overlay {
+    display: block;
+}
+
+#init_overlay button{
+      font-size: 3vw;
+}
+
+.overlay-content {
+  position: relative;
+  top: 0.5vw;
+  width: 50%; /* 100% width */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Centered text/links */
+  margin-top: 20px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  /*border: 5px solid #ccc;*/
+}
+
+.overlay-content video {
+  vertical-align: top;
+  --width: 100%;
+  width: var(--width);
+  height: calc(var(--width) * 0.5625);
+  border: 5px solid #ccc;
+}
+
+.overlay-content button {
+  /*background-color: #555;*/
+  float: left;
+  /*border: 1px solid #ddd;*/
+  /*outline: none;*/
+  cursor: pointer;
+
+  top: 0;
+  bottom: 0;
+  width: 24%;
+  margin-left: 7%;
+
+  padding: 10px 12px; /*padding around text*/
+  font-size: 1.5vw;
+}
+
+.grey {
+  border: 5px solid #ccc;   
+  background-color: #cfcfcf;
+  pointer-events: none;
+}
+/*
+#close {
+    display:none;
+}*/

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MediaStream Recording</title>
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Noto+Sans+TC|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="camera_record.css">
+    <script src="camera_record.js" async></script>
+
+</head>
+<body>
+
+    <div id="recorder" class="split left">
+        <div id = "record_controls">
+            <div id="view_block_countdown"></div>
+            <video id="view" playsinline autoplay muted></video>
+            <div id="recorder_prompt" style="display: none;">
+                <div id="startstopdiv">
+                    <button id="startstoptext">開始錄音</button>
+                    <button id="startstopicon"></button>
+                    
+                </div>
+                <p><span id="record_category_text"></span><span id="record_phrase_text"></span>
+                <p> 只要錄 <span id="record_phrase_text2"></span> 就好了
+                </p>
+            </div>
+        </div>
+        <!-- <button id="openOverlay" onclick="openSaveOverlay()">OpenOverlay</span> -->
+    </div>
+
+
+    <div id="selector" class="split right">
+        <div class="tabbar">
+            <button class="tablink Bless" id="BlessTab" onclick="openTab('Bless')">祝福他們</button>
+            <button class="tablink Both" id="BothTab" onclick="openTab('Both')">智堯和佳宜</button>
+            <button class="tablink Yao" id="YaoTab" onclick="openTab('Yao')">智堯是一個</button>
+            <button class="tablink Yeh" id="YehTab" onclick="openTab('Yeh')">佳宜是一個</button>
+        </div>
+
+        <div id="Default" class="tabcontent StartTab" style="display: block;">
+        <!-- <div id="Default" class="tabcontent" style="display: block;"> -->
+            
+            <h3 class="categoryText"><font color="brown">⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ ⇧ </font></h3>
+            <h3 class="categoryText">請點選上面一個類別 來開始錄音</h3>
+        </div>
+
+        <div id="Yao" class="tabcontent Yao">
+            <h3 class="categoryText">我認識的智堯是一個</h3>
+        </div>
+
+        <div id="Yeh" class="tabcontent Yeh">
+            <h3 class="categoryText">我認識的佳宜是一個</h3>
+<!--             <button class="selectablePhrase " id="Yeh_Free" onclick="selectPhrase(this)">自由發揮</button>
+            <button class="selectablePhrase" id="Yeh_001" onclick="selectPhrase(this)">做飯好吃</button> -->
+        </div>
+
+        <div id="Both" class="tabcontent Both">
+            <h3 class="categoryText">我相信智堯和佳宜兩人絕對是真愛，因為他們</h3>
+        </div>
+
+        <div id="Bless" class="tabcontent Bless">
+            <h3 class="categoryText">聽到智堯和佳宜要結婚的消息，我想要跟他們說聲</h3>
+        </div>
+    </div>
+
+
+    <div id="check_overlay" class="overlay">
+        <div id = "recorded_check_submit" class="overlay-content">
+            <video id="recorded" playsinline loop></video>
+            <button id="discard">放棄重來</button>
+            <button id="save">就這樣了<p>(存檔)</button>
+            <button id="close" disabled='true'>結束</button>
+        </div>
+    </div>
+
+
+    <div id="init_overlay" class="overlay">
+        <button id="init">Init Recording</button>
+
+        <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-buddha" title="Pixel Buddha">Pixel Buddha</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+    </div>
+
+    <script src="https://spreadsheets.google.com/feeds/cells/11IYAyqpy39YSgdz_6ISFIuucV4zLhFATlYli9r2KsOU/od6/public/values?alt=json-in-script&callback=dataCallback"></script>
+    <!-- <script src="camera_record.js" async></script> -->
+</body>

@@ -71,6 +71,10 @@ Video caputre:
 Open pnp: cross platform video capture:
 	https://github.com/openpnp/openpnp-capturesu
 
+Web-based capture:
+https://developers.google.com/web/fundamentals/media/recording-video
+https://www.cam-recorder.com/
+
 
 
 Overall architecture:

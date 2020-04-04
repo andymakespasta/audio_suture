@@ -1,0 +1,54 @@
+Pieces to build:
+
+python commandline merger. 
+	base:
+		merge all in folder
+		filename determines group
+		in-betweens already in folder
+		runs on my computer and yeh computer (remember list of import/ pip installs)
+
+	python sheets api grab complete list as double check.
+		checks if all files in registry are found in folder
+			https://developers.google.com/sheets/api/quickstart/python
+		registry has column that allows us to nullify inputs (say this one is not wanted.)
+
+	improved output quality:
+		equalize volume   --- us ffmpeg filters (loudnorm) ffmpeg-normalize automatically 
+			normalize -> concat : removes differences from mic distance and recording equipment.
+			concat -> Dynamic Range Compression : reduces differences across a single video.
+			https://medium.com/@jud.dagnall/dynamic-range-compression-for-audio-with-ffmpeg-and-compand-621fe2b1a892
+		handles video and multiple formats, using the nicer two pass formula
+		noise reduction
+		front and back empty space removal (may eat up video posture.)?
+
+recorder:
+	base:
+		generate filename from class and random string to prevent collisions
+
+	selectable suggestions:
+		append to filename suggestion
+
+	connected:
+		surfaced suggestions taken from sheets API via javascript?
+			https://github.com/google/google-api-javascript-client
+		save selected and recorded thing to sheets VIA jaavascript API 
+			checkmarks blah is done in main list, adds completed recording to registry
+			register recordings into separate sheet
+
+	volume suggestion:
+		when setting up camera, do a test, and suggest changing the volume if too low
+
+
+
+bugs
+test4.mkv speeds up and segments soundwhen concat after normalization !?!
+
+
+
+
+
+notes:
+using static build of ffmpeg 4.2.1 + pip install ffmpeg-normalize, ffmpeg override apt installation via PATH=~/audio_suture/ffmpeg-4.2.1-amd64-static:$PATH
+https://johnvansickle.com/ffmpeg/ download builds
+https://ffmpeg.zeranoe.com/builds/
+
